@@ -10,14 +10,10 @@ import Testing
 
 struct GradeCalculatorTests {
 
-    @Test func verifying_score_of_85_returns_B() {
+    @Test func verifying_score_of_85_returns_B() throws {
         let calculator = GradeCalculator()
-        do {
-            let grade = try calculator.calculateGrade(score: 85)
-            #expect(grade == "B")
-        } catch {
-
-        }
+        let grade = try calculator.calculateGrade(score: 85)
+        #expect(grade == "B")
     }
 
     @Test("Get Grades by providing different scores", arguments: [
