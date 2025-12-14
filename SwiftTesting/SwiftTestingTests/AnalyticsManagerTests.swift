@@ -9,7 +9,6 @@ import Testing
 @testable import SwiftTesting
 
 struct AnalyticsManagerTests {
-
     @Test("Making sure completion handler call once")
     func completion_handler_confirmation() async {
         let manager = await AnalyticsManager()
